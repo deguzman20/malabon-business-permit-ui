@@ -1,5 +1,5 @@
 const colors = {
-  neutralWhite: '#ffffff',
+  neutralWhite: "#ffffff",
   brightGrey: "#EEEEEE",
   fauxDarkPurple: "#2F1A35",
   greySuit: "#9099A4",
