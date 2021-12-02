@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { theme } from './theme/theme';
-import { ThemeProvider } from '@mui/material';
+import { ThemeProvider } from 'styled-components';
 import reportWebVitals from './reportWebVitals';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
@@ -13,11 +13,11 @@ const Loading = () => <ReactLoading type={'balls'} color={'#FFC0CB'} height={'20
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading />}>
+        <ThemeProvider theme={theme}>
           <AppWrapper />
-        </Suspense>
-      </ThemeProvider>
+        </ThemeProvider>
+      </Suspense>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
